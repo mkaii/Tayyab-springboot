@@ -1,0 +1,230 @@
+2023-11-20 12:33:03 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-11-20 12:33:05 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-11-20 13:15:09 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-11-20 13:15:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ""Data""\000a(\000a    ""deviceID""          INTEGER auto_increment,\000a    time                DATE,\000a    status              VARCHAR(1),\000a    latitude            DOUBLE,\000a    latitude_direction  VARCHAR(1),\000a    longitude           DOUBLE,\000a    longitude_direction VARCHAR(1),\000a    heading             DOUBLE,\000a    magnetic_deviation  DOUBLE,\000a    deviation_direction VARCHAR(1),\000a    constraint ""Data_pk""\000a        primary key (""deviceID""),\000a    constraint ""Data___fk""\000a        foreign key (""deviceID"") references [*]??? (""""),\000a    constraint check_deviation_direction\000a        check ('E' OR 'W'),\000a    constraint check_latitude_direction\000a        check ('N' or 'S'),\000a    constraint check_longitude_direction\000a        check ('E' OR 'W'),\000a    constraint check_status\000a        check ('A' OR 'V')\000a)"; expected "identifier"; SQL statement:
+create table "Data"
+(
+    "deviceID"          INTEGER auto_increment,
+    time                DATE,
+    status              VARCHAR(1),
+    latitude            DOUBLE,
+    latitude_direction  VARCHAR(1),
+    longitude           DOUBLE,
+    longitude_direction VARCHAR(1),
+    heading             DOUBLE,
+    magnetic_deviation  DOUBLE,
+    deviation_direction VARCHAR(1),
+    constraint "Data_pk"
+        primary key ("deviceID"),
+    constraint "Data___fk"
+        foreign key ("deviceID") references ??? (""),
+    constraint check_deviation_direction
+        check ('E' OR 'W'),
+    constraint check_latitude_direction
+        check ('N' or 'S'),
+    constraint check_longitude_direction
+        check ('E' OR 'W'),
+    constraint check_status
+        check ('A' OR 'V')
+) [42001-210]
+2023-11-20 13:15:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "CHARACTER VARYING to BOOLEAN"; SQL statement:
+create table "Data"
+(
+    "deviceID"          INTEGER auto_increment,
+    time                DATE,
+    status              VARCHAR(1),
+    latitude            DOUBLE,
+    latitude_direction  VARCHAR(1),
+    longitude           DOUBLE,
+    longitude_direction VARCHAR(1),
+    heading             DOUBLE,
+    magnetic_deviation  DOUBLE,
+    deviation_direction VARCHAR(1),
+    constraint check_deviation_direction
+        check ('E' OR 'W'),
+    constraint check_latitude_direction
+        check ('N' or 'S'),
+    constraint check_longitude_direction
+        check ('E' OR 'W'),
+    constraint check_status
+        check ('A' OR 'V')
+) [22018-210]
+2023-11-20 13:15:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "CHARACTER VARYING to BOOLEAN"; SQL statement:
+create table "Data"
+(
+    "deviceID"          INTEGER auto_increment,
+    time                DATE,
+    status              VARCHAR(1),
+    latitude            DOUBLE,
+    latitude_direction  VARCHAR(1),
+    longitude           DOUBLE,
+    longitude_direction VARCHAR(1),
+    heading             DOUBLE,
+    magnetic_deviation  DOUBLE,
+    deviation_direction VARCHAR(1),
+    constraint "Data_pk"
+        primary key ("deviceID"),
+    constraint check_deviation_direction
+        check ('E' OR 'W'),
+    constraint check_latitude_direction
+        check ('N' or 'S'),
+    constraint check_longitude_direction
+        check ('E' OR 'W'),
+    constraint check_status
+        check ('A' OR 'V')
+) [22018-210]
+2023-11-20 13:16:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "CHARACTER VARYING to BOOLEAN"; SQL statement:
+create table "Data"
+(
+    "deviceID"          INTEGER auto_increment,
+    time                DATE,
+    status              VARCHAR(1),
+    latitude            DOUBLE,
+    latitude_direction  VARCHAR(1),
+    longitude           DOUBLE,
+    longitude_direction VARCHAR(1),
+    heading             DOUBLE,
+    magnetic_deviation  DOUBLE,
+    deviation_direction VARCHAR(1),
+    constraint "Data_pk"
+        primary key ("deviceID"),
+    constraint check_deviation_direction
+        check ('E' OR 'W'),
+    constraint check_latitude_direction
+        check ('N' or 'S'),
+    constraint check_longitude_direction
+        check ('E' OR 'W'),
+    constraint check_status
+        check ('A' OR 'V')
+) [22018-210]
+2023-11-20 13:17:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "CHARACTER VARYING to BOOLEAN"; SQL statement:
+create table "Data"
+(
+    "deviceID"          INTEGER auto_increment,
+    time                DATE,
+    status              VARCHAR(1),
+    latitude            DOUBLE,
+    latitude_direction  VARCHAR(1),
+    longitude           DOUBLE,
+    longitude_direction VARCHAR(1),
+    heading             DOUBLE,
+    magnetic_deviation  DOUBLE,
+    deviation_direction VARCHAR(1),
+    constraint "Data_pk"
+        primary key ("deviceID"),
+    constraint check_deviation_direction
+        check ('E' OR 'W'),
+    constraint check_latitude_direction
+        check ('N' or 'S'),
+    constraint check_longitude_direction
+        check ('E' OR 'W'),
+    constraint check_status
+        check ('A' OR 'V')
+) [22018-210]
+2023-11-20 13:17:34 jdbc[4]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-11-27 13:33:30 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
