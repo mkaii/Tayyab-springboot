@@ -1,1 +1,8 @@
 git clone https://github.com/mkaii/Tayyab-springboot
+git status
+git add <name of the change>
+git commit -m "<some msg>"
+git log
+git remote -v : to check the name and link of the remote counterpart 
+git push origin <name of the branch>
+git pull origin <name of the branch>
