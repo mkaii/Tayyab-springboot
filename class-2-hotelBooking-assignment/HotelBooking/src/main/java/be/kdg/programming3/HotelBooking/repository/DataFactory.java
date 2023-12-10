@@ -16,7 +16,6 @@ public class DataFactory {
     private static List<Guest> guests = new ArrayList<>();
 
 
-
     //create the initial mock data with which the client can interact using the console
     public static void seed()
     {
@@ -48,11 +47,11 @@ public class DataFactory {
 
         // creating the guests mock data
 
-        Guest guest1 = new Guest(1, "John", "Doe", "john.doe@gmail.com", "+1234567890");
-        Guest guest2 = new Guest(2, "Jane", "Smith", "jane.smith@yahoo.com", "+9876543210");
-        Guest guest3 = new Guest(3, "Alice", "Johnson", "alice.johnson@hotmail.com", "+1112223333");
-        Guest guest4 = new Guest(4, "Bob", "Williams", "bob.williams@gmail.com", "+5556667777");
-        Guest guest5 = new Guest(5, "Eva", "Brown", "eva.brown@example.com", "+9998887777");
+        Guest guest1 = new Guest(1, "John", "Doe", "john.doe@gmail.com", "+1234567890",Gender.MALE);
+        Guest guest2 = new Guest(2, "Jane", "Smith", "jane.smith@yahoo.com", "+9876543210",Gender.MALE);
+        Guest guest3 = new Guest(3, "Alice", "Johnson", "alice.johnson@hotmail.com", "+1112223333",Gender.FEMALE);
+        Guest guest4 = new Guest(4, "Bob", "Williams", "bob.williams@gmail.com", "+5556667777",Gender.MALE);
+        Guest guest5 = new Guest(5, "Eva", "Brown", "eva.brown@example.com", "+9998887777",Gender.FEMALE);
 
 
         guests.addAll(List.of(guest1,guest2,guest3,guest4,guest5));
@@ -94,12 +93,38 @@ public class DataFactory {
         roomBookings.addAll(List.of(booking1,booking2,booking3,booking4));
 
 
-
-
-
-
     }
 
 
+    public static List<Room> getRooms() {
+        return rooms;
+    }
 
+    public static void setRooms(List<Room> rooms) {
+        DataFactory.rooms = rooms;
+    }
+
+    public static List<RoomPhoto> getRoomPhotos() {
+        return roomPhotos;
+    }
+
+    public static void setRoomPhotos(List<RoomPhoto> roomPhotos) {
+        DataFactory.roomPhotos = roomPhotos;
+    }
+
+    public static List<RoomBooking> getRoomBookings() {
+        return roomBookings;
+    }
+
+    public static void setRoomBookings(List<RoomBooking> roomBookings) {
+        DataFactory.roomBookings = roomBookings;
+    }
+
+    public static List<Guest> getGuests() {
+        return guests;
+    }
+
+    public static void setGuests(List<Guest> guests) {
+        DataFactory.guests = guests;
+    }
 }

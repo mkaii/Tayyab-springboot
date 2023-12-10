@@ -6,17 +6,19 @@ public class Guest {
 
     private Integer guestId;
     private String guestFirstName;
-    private String guestSecondName;
+    private String guestSecondName;//filter on this
     private String guestEmail;
     private String guestContactNumber;
+    private Gender GuestGender;
 
 
-    public Guest(Integer guestId, String guestFirstName, String guestSecondName, String guestEmail, String guestContactNumber) {
+    public Guest(Integer guestId, String guestFirstName, String guestSecondName, String guestEmail, String guestContactNumber, Gender guestGender) {
         this.guestId = guestId;
         this.guestFirstName = guestFirstName;
         this.guestSecondName = guestSecondName;
         this.guestEmail = guestEmail;
         this.guestContactNumber = guestContactNumber;
+        GuestGender = guestGender;
     }
 
     public Integer getGuestId() {
@@ -59,6 +61,10 @@ public class Guest {
         this.guestContactNumber = guestContactNumber;
     }
 
+    public void setGuestGender(Gender guestGender) {
+        GuestGender = guestGender;
+    }
+
     @Override
     public String toString() {
         return "Guest{" +
@@ -67,6 +73,7 @@ public class Guest {
                 ", guestSecondName='" + guestSecondName + '\'' +
                 ", guestEmail='" + guestEmail + '\'' +
                 ", guestContactNumber='" + guestContactNumber + '\'' +
+                ", GuestGender=" + GuestGender +
                 '}';
     }
 }
