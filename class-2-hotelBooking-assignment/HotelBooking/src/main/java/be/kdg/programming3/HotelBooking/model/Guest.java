@@ -10,15 +10,13 @@ public class Guest {
     private String guestEmail;
     private String guestContactNumber;
 
-    private List<GuestRoomBooking> guestRoomBookings;
 
-    public Guest(Integer guestId, String guestFirstName, String guestSecondName, String guestEmail, String guestContactNumber, List<GuestRoomBooking> guestRoomBookings) {
+    public Guest(Integer guestId, String guestFirstName, String guestSecondName, String guestEmail, String guestContactNumber) {
         this.guestId = guestId;
         this.guestFirstName = guestFirstName;
         this.guestSecondName = guestSecondName;
         this.guestEmail = guestEmail;
         this.guestContactNumber = guestContactNumber;
-        this.guestRoomBookings = guestRoomBookings;
     }
 
     public Integer getGuestId() {
@@ -61,14 +59,6 @@ public class Guest {
         this.guestContactNumber = guestContactNumber;
     }
 
-    public List<GuestRoomBooking> getGuestRoomBookings() {
-        return guestRoomBookings;
-    }
-
-    public void setGuestRoomBookings(List<GuestRoomBooking> guestRoomBookings) {
-        this.guestRoomBookings = guestRoomBookings;
-    }
-
     @Override
     public String toString() {
         return "Guest{" +
@@ -77,7 +67,6 @@ public class Guest {
                 ", guestSecondName='" + guestSecondName + '\'' +
                 ", guestEmail='" + guestEmail + '\'' +
                 ", guestContactNumber='" + guestContactNumber + '\'' +
-                ", guestRoomBookings=" + guestRoomBookings +
                 '}';
     }
 }

@@ -4,26 +4,34 @@ import java.time.LocalDateTime;
 
 public class RoomBooking {
 
-    private Integer roomBookingId;
+    private Integer roomId;
+    private Integer guestId;
+
     private LocalDateTime fromDateTime;
     private LocalDateTime toDateTime;
 
-    //connection with the actual room
-    private Integer roomId;
 
-    public RoomBooking(Integer roomBookingId, LocalDateTime fromDateTime, LocalDateTime toDateTime, Integer roomId) {
-        this.roomBookingId = roomBookingId;
+    public RoomBooking(Integer roomId, Integer guestId, LocalDateTime fromDateTime, LocalDateTime toDateTime) {
+        this.roomId = roomId;
+        this.guestId = guestId;
         this.fromDateTime = fromDateTime;
         this.toDateTime = toDateTime;
+    }
+
+    public Integer getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(Integer roomId) {
         this.roomId = roomId;
     }
 
-    public Integer getRoomBookingId() {
-        return roomBookingId;
+    public Integer getGuestId() {
+        return guestId;
     }
 
-    public void setRoomBookingId(Integer roomBookingId) {
-        this.roomBookingId = roomBookingId;
+    public void setGuestId(Integer guestId) {
+        this.guestId = guestId;
     }
 
     public LocalDateTime getFromDateTime() {
@@ -42,21 +50,13 @@ public class RoomBooking {
         this.toDateTime = toDateTime;
     }
 
-    public Integer getRoomId() {
-        return roomId;
-    }
-
-    public void setRoomId(Integer roomId) {
-        this.roomId = roomId;
-    }
-
     @Override
     public String toString() {
         return "RoomBooking{" +
-                "roomBookingId=" + roomBookingId +
+                "roomId=" + roomId +
+                ", guestId=" + guestId +
                 ", fromDateTime=" + fromDateTime +
                 ", toDateTime=" + toDateTime +
-                ", roomId=" + roomId +
                 '}';
     }
 }

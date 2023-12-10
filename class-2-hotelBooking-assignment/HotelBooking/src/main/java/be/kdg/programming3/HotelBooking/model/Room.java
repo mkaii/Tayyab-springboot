@@ -12,9 +12,8 @@ public class Room {
     private double price;
     private RoomType roomType;
 
-    private List<RoomBooking> bookings;
 
-    public Room(Integer roomId, String roomNumber, String roomDescription, Integer floor, boolean occupied, double price, RoomType roomType, List<RoomBooking> bookings) {
+    public Room(Integer roomId, String roomNumber, String roomDescription, Integer floor, boolean occupied, double price, RoomType roomType) {
         this.roomId = roomId;
         this.roomNumber = roomNumber;
         this.roomDescription = roomDescription;
@@ -22,7 +21,6 @@ public class Room {
         this.occupied = occupied;
         this.price = price;
         this.roomType = roomType;
-        this.bookings = bookings;
     }
 
     public Integer getRoomId() {
@@ -81,13 +79,6 @@ public class Room {
         this.roomType = roomType;
     }
 
-    public List<RoomBooking> getBookings() {
-        return bookings;
-    }
-
-    public void setBookings(List<RoomBooking> bookings) {
-        this.bookings = bookings;
-    }
 
     @Override
     public String toString() {
@@ -99,7 +90,6 @@ public class Room {
                 ", occupied=" + occupied +
                 ", price=" + price +
                 ", roomType=" + roomType +
-                ", bookings=" + bookings +
                 '}';
     }
 }
