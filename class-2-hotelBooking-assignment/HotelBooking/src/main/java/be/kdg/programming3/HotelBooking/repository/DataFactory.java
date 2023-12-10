@@ -11,8 +11,10 @@ public class DataFactory {
 
     //these 4 lists are our actual source of data
     private static List<Room> rooms = new ArrayList<>();
+    private static List<RoomPhoto> roomPhotos = new ArrayList<>();
     private static List<RoomBooking> roomBookings = new ArrayList<>();
     private static List<Guest> guests = new ArrayList<>();
+
 
 
     //create the initial mock data with which the client can interact using the console
@@ -31,6 +33,18 @@ public class DataFactory {
         rooms.add(room4);*/
 
         rooms.addAll(List.of(room1,room2,room3,room4));
+
+        //create the room photo
+        //room 1 photo :
+
+        RoomPhoto room1photo1 = new RoomPhoto(1,"link-1",1);
+        RoomPhoto room1photo2 = new RoomPhoto(2,"link-2",1);
+
+        RoomPhoto room2photo1 = new RoomPhoto(3,"link-3",2);
+
+        roomPhotos.addAll(List.of(room1photo1,room1photo2,room2photo1));
+
+
 
         // creating the guests mock data
 
