@@ -1,14 +1,12 @@
 package be.kdg.programming3.hotelbooking.repository;
 
 import be.kdg.programming3.hotelbooking.domain.*;
-import jakarta.annotation.PostConstruct;
-import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
-@Component
+
 public class DataFactory {
 
     //these 4 lists are our actual source of data
@@ -19,7 +17,6 @@ public class DataFactory {
 
 
     //create the initial data
-    @PostConstruct
     public static void seed()
     {
         //create rooms in the system :

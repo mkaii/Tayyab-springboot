@@ -8,4 +8,6 @@ import java.util.List;
 public interface GuestService {
     List<Guest> getGuestsByCriteria(Gender gender, String name);
     List<Guest> getAllGuests();
+    List<Guest> getGuestsByInput(String genderInput, String name);
+
 }

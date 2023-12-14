@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface RoomService {
     List<Room> getRoomsByType(RoomType roomType);
+    List<Room> getAllRooms();
+    List<Room>getRoomsByChoice(int choice);
 }

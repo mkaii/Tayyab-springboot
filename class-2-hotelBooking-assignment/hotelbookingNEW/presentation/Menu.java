@@ -1,45 +1,24 @@
 package be.kdg.programming3.hotelbooking.presentation;
 import be.kdg.programming3.hotelbooking.repository.DataFactory;
 import be.kdg.programming3.hotelbooking.repository.JSonWriter;
-import be.kdg.programming3.hotelbooking.service.GuestService;
-import be.kdg.programming3.hotelbooking.service.RoomService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import be.kdg.programming3.hotelbooking.service.*;
 
-import java.util.List;
 import java.util.Scanner;
 
-@Component
+
 public class Menu {
 
     public static final String PATH = "./src/main/java/be/kdg/programming3/HotelBooking/repository/";
-    private Scanner scanner;
-    private Presenter presenter;
-    private RoomService roomService;
-    private GuestService guestService;
-
-    @Autowired
-    public void setPresenter(Presenter presenter) {
-        this.presenter = presenter;
-    }
-
-    @Autowired
-    public void setRoomService(RoomService roomService) {
-        this.roomService = roomService;
-    }
-
-    @Autowired
-    public void setGuestService(GuestService guestService) {
-        this.guestService = guestService;
-    }
-
-    @Autowired
-    public void setScanner(Scanner scanner) {
-        this.scanner = scanner;
-    }
 
     public void show() {
+        Scanner scanner = new Scanner(System.in);
 
+        //create service instance
+        RoomService roomService = new RoomServiceImpl(); // Create RoomService instance
+        GuestService guestService = new GuestServiceImpl();
+        BookingService bookingService = new BookingServiceImpl();
+        //create presnter instance
+        Presenter presenter = new Presenter(roomService,guestService, bookingService);
         try {
             while (true) {
                 System.out.println("What would you like to do ?");
@@ -57,7 +36,7 @@ public class Menu {
                         System.out.println("Thank you for using the APP");
                         throw new IllegalStateException("Program ended");
                     case 1:
-                        presenter.showAllRooms(DataFactory.getRooms());
+                        presenter.showAllRooms();
                         JSonWriter.saveToJsonFile(DataFactory.getRooms(), PATH + "room.json");
                         break;
                     case 2:
@@ -65,15 +44,15 @@ public class Menu {
                         JSonWriter.saveToJsonFile(DataFactory.getRooms(), PATH + "room.json");
                         break;
                     case 3:
-                        presenter.showAllGuests(DataFactory.getGuests());
+                        presenter.showAllGuests();
                         JSonWriter.saveToJsonFile(DataFactory.getGuests(), PATH + "guest.json");
                         break;
                     case 4:
-                        presenter.showGuestsBasedOnCriteria(guestService);
+                        presenter.showGuestsBasedOnCriteria();
                         JSonWriter.saveToJsonFile(DataFactory.getGuests(), PATH + "guest.json");
                         break;
                     case 5:
-                        presenter.showBookingsBasedOnCriteria(DataFactory.getRoomBookings());
+                        presenter.showBookingsBasedOnCriteria();
                         JSonWriter.saveToJsonFile(DataFactory.getRoomBookings(), PATH + "roomBooking.json");
                         break;
                     default:

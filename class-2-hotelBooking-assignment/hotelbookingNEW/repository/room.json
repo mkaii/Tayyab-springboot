@@ -34,41 +34,5 @@
     "occupied": true,
     "price": 85.0,
     "roomType": "SINGLE"
-  },
-  {
-    "roomId": 1,
-    "roomNumber": "101",
-    "roomDescription": "Single Bed Room",
-    "floor": 1,
-    "occupied": false,
-    "price": 75.5,
-    "roomType": "SINGLE"
-  },
-  {
-    "roomId": 2,
-    "roomNumber": "201",
-    "roomDescription": "Double Bed Room",
-    "floor": 2,
-    "occupied": true,
-    "price": 125.5,
-    "roomType": "DOUBLE"
-  },
-  {
-    "roomId": 3,
-    "roomNumber": "301",
-    "roomDescription": "Deluxe Bed Room",
-    "floor": 3,
-    "occupied": false,
-    "price": 145.5,
-    "roomType": "DELUXE"
-  },
-  {
-    "roomId": 4,
-    "roomNumber": "401",
-    "roomDescription": "Single Bed Room",
-    "floor": 4,
-    "occupied": true,
-    "price": 85.0,
-    "roomType": "SINGLE"
   }
 ]
