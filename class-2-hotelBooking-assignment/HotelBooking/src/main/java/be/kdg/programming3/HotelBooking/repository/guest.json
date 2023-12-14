@@ -1,0 +1,42 @@
+[
+  {
+    "guestId": 1,
+    "guestFirstName": "John",
+    "guestLastName": "Doe",
+    "guestEmail": "john.doe@gmail.com",
+    "guestContactNumber": "+1234567890",
+    "GuestGender": "MALE"
+  },
+  {
+    "guestId": 2,
+    "guestFirstName": "Jane",
+    "guestLastName": "Smith",
+    "guestEmail": "jane.smith@yahoo.com",
+    "guestContactNumber": "+9876543210",
+    "GuestGender": "MALE"
+  },
+  {
+    "guestId": 3,
+    "guestFirstName": "Alice",
+    "guestLastName": "Johnson",
+    "guestEmail": "alice.johnson@hotmail.com",
+    "guestContactNumber": "+1112223333",
+    "GuestGender": "FEMALE"
+  },
+  {
+    "guestId": 4,
+    "guestFirstName": "Bob",
+    "guestLastName": "Williams",
+    "guestEmail": "bob.williams@gmail.com",
+    "guestContactNumber": "+5556667777",
+    "GuestGender": "MALE"
+  },
+  {
+    "guestId": 5,
+    "guestFirstName": "Eva",
+    "guestLastName": "Brown",
+    "guestEmail": "eva.brown@example.com",
+    "guestContactNumber": "+9998887777",
+    "GuestGender": "FEMALE"
+  }
+]

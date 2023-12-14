@@ -1,6 +1,4 @@
-package be.kdg.programming3.HotelBooking.model;
-
-import java.util.List;
+package be.kdg.programming3.HotelBooking.domain;
 
 public class Room {
 
@@ -80,16 +78,10 @@ public class Room {
     }
 
 
+
     @Override
     public String toString() {
-        return "Room{" +
-                "roomId=" + roomId +
-                ", roomNumber='" + roomNumber + '\'' +
-                ", roomDescription='" + roomDescription + '\'' +
-                ", floor=" + floor +
-                ", occupied=" + occupied +
-                ", price=" + price +
-                ", roomType=" + roomType +
-                '}';
+        return "Room Number " +roomNumber+" is of type "+ roomType+", located on floor "+floor+" and it costs "+price+" euro";
     }
+
 }

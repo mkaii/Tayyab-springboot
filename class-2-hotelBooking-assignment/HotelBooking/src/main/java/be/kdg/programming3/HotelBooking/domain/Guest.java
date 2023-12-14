@@ -1,21 +1,19 @@
-package be.kdg.programming3.HotelBooking.model;
-
-import java.util.List;
+package be.kdg.programming3.HotelBooking.domain;
 
 public class Guest {
 
     private Integer guestId;
     private String guestFirstName;
-    private String guestSecondName;//filter on this
+    private String guestLastName;//filter on this
     private String guestEmail;
     private String guestContactNumber;
     private Gender GuestGender;
 
 
-    public Guest(Integer guestId, String guestFirstName, String guestSecondName, String guestEmail, String guestContactNumber, Gender guestGender) {
+    public Guest(Integer guestId, String guestFirstName, String guestLastName, String guestEmail, String guestContactNumber, Gender guestGender) {
         this.guestId = guestId;
         this.guestFirstName = guestFirstName;
-        this.guestSecondName = guestSecondName;
+        this.guestLastName = guestLastName;
         this.guestEmail = guestEmail;
         this.guestContactNumber = guestContactNumber;
         GuestGender = guestGender;
@@ -33,16 +31,20 @@ public class Guest {
         return guestFirstName;
     }
 
+    public Gender getGuestGender() {
+        return GuestGender;
+    }
+
     public void setGuestFirstName(String guestFirstName) {
         this.guestFirstName = guestFirstName;
     }
 
-    public String getGuestSecondName() {
-        return guestSecondName;
+    public String getGuestLastName() {
+        return guestLastName;
     }
 
-    public void setGuestSecondName(String guestSecondName) {
-        this.guestSecondName = guestSecondName;
+    public void setguestLastName(String guestLastName) {
+        this.guestLastName = guestLastName;
     }
 
     public String getGuestEmail() {
@@ -67,13 +69,6 @@ public class Guest {
 
     @Override
     public String toString() {
-        return "Guest{" +
-                "guestId=" + guestId +
-                ", guestFirstName='" + guestFirstName + '\'' +
-                ", guestSecondName='" + guestSecondName + '\'' +
-                ", guestEmail='" + guestEmail + '\'' +
-                ", guestContactNumber='" + guestContactNumber + '\'' +
-                ", GuestGender=" + GuestGender +
-                '}';
+        return guestFirstName+ " "+ guestLastName+ " - Email: "+guestEmail+" can be reached on: "+guestContactNumber;
     }
 }

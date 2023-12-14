@@ -1,6 +1,7 @@
-package be.kdg.programming3.HotelBooking.model;
+package be.kdg.programming3.HotelBooking.domain;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class RoomBooking {
 
@@ -52,11 +53,10 @@ public class RoomBooking {
 
     @Override
     public String toString() {
-        return "RoomBooking{" +
-                "roomId=" + roomId +
-                ", guestId=" + guestId +
-                ", fromDateTime=" + fromDateTime +
-                ", toDateTime=" + toDateTime +
-                '}';
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        return "   Room ID: " + roomId + "\n" +
+                "   Guest ID: " + guestId + "\n" +
+                "   Booking Start: " + fromDateTime.format(formatter) + "\n" +
+                "   Booking End: " + toDateTime.format(formatter) + "\n";
     }
 }

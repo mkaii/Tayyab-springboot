@@ -1,0 +1,26 @@
+[
+  {
+    "roomId": 1,
+    "guestId": 2,
+    "fromDateTime": "9-Dec-2023 10:00",
+    "toDateTime": "9-Dec-2023 11:00"
+  },
+  {
+    "roomId": 1,
+    "guestId": 3,
+    "fromDateTime": "9-Dec-2023 11:00",
+    "toDateTime": "9-Dec-2023 12:00"
+  },
+  {
+    "roomId": 3,
+    "guestId": 2,
+    "fromDateTime": "9-Dec-2023 11:00",
+    "toDateTime": "9-Dec-2023 12:00"
+  },
+  {
+    "roomId": 4,
+    "guestId": 3,
+    "fromDateTime": "9-Dec-2023 11:00",
+    "toDateTime": "9-Dec-2023 12:00"
+  }
+]
