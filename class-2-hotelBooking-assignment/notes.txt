@@ -1,0 +1,2 @@
+Json writer - fix on my own and see append issue and dynamic creation of jsons during the run of the code.
+Dependency injection using interfaces and objects- achieve decoupling using abstraction
