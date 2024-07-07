@@ -1,0 +1,105 @@
+html{
+    height: 97%;
+}
+.navbar-custom {
+    background-color: #f8f9fa;
+}
+
+.navbar-custom .navbar-brand {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #000000;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-item.active .nav-link {
+    color: #E4312b;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: #149954;
+}
+
+.navbar-custom .navbar-toggler-icon {
+
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+@media (max-width: 991px) {
+    .navbar-custom .navbar-collapse {
+        background-color: #f8f9fa;
+    }
+
+    .navbar-brand img {
+        height: 60px;
+    }
+    h1 {
+        font-size: 1.75rem;
+    }
+    p, li {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .navbar-custom .navbar-nav {
+        flex-direction: column; /* vertical links for small screens */
+    }
+
+    .navbar-brand img {
+        height: 50px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    p, li {
+        font-size: 0.875rem;
+    }
+    .table thead {
+        display: none;
+    }
+    .table tr {
+        margin-bottom: 10px;
+        display: block;
+        background: #f8f9fa;
+    }
+    .table td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        font-size: 14px; /* small screen = small font */
+    }
+    .table td::before {
+        content: attr(data-label); /* header text = data label */
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    label, .form-control {
+        font-size: 0.875rem; /* small screen = small font */
+    }
+    .btn {
+        padding: .75rem 1.5rem; /* big padding for easy touch */
+
+    }
+
+}
+body{
+    min-height: 99%;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top:auto;
+}
