@@ -54,17 +54,17 @@ public class HotelController {
         return "guest-list";
     }
 
-    @GetMapping("/getGuestsAndReservations")
-    public ResponseEntity<Map<String, Object>> ajaxGetGuestsAndReservationsForRoom(@RequestParam("roomId") Integer roomId) {
-        Room room = roomService.getById(roomId);
-        List<Guest> guests = guestService.findGuestByRoom(room);
-        List<Reservation> reservations = reservationService.findByRoom(roomId);
-        Map<String, Object> response = new HashMap<>();
-        response.put("guests", guests);
-        response.put("reservations", reservations);
-
-        return ResponseEntity.ok(response);
-    }
+//    @GetMapping("/getGuestsAndReservations")
+//    public ResponseEntity<Map<String, Object>> ajaxGetGuestsAndReservationsForRoom(@RequestParam("roomId") Integer roomId) {
+//        Room room = roomService.getById(roomId);
+//        List<Guest> guests = guestService.findGuestByRoom(room);
+//        List<Reservation> reservations = reservationService.findByRoom(roomId);
+//        Map<String, Object> response = new HashMap<>();
+//        response.put("guests", guests);
+//        response.put("reservations", reservations);
+//
+//        return ResponseEntity.ok(response);
+//    }
     @DeleteMapping("/deleteRoom")
     public ResponseEntity<?> deleteRoom(@RequestParam("roomId") int roomId) {
         try {
@@ -74,15 +74,15 @@ public class HotelController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-    @GetMapping("/getRoomsForGuests")
-    public ResponseEntity<Map<String, Object>> ajaxGetRoomsAndReservationsByGuest(@RequestParam("guestId") Integer guestId) {
-        Guest guest = guestService.getById(guestId);
-        List<Room> rooms = guest.getRooms();
-        System.out.println("Rooms: " + rooms);
-        Map<String, Object> response = new HashMap<>();
-        response.put("rooms", rooms);
-        return ResponseEntity.ok(response);
-    }
+//    @GetMapping("/getRoomsForGuests")
+//    public ResponseEntity<Map<String, Object>> ajaxGetRoomsAndReservationsByGuest(@RequestParam("guestId") Integer guestId) {
+//        Guest guest = guestService.getById(guestId);
+//        List<Room> rooms = guest.getRooms();
+//        System.out.println("Rooms: " + rooms);
+//        Map<String, Object> response = new HashMap<>();
+//        response.put("rooms", rooms);
+//        return ResponseEntity.ok(response);
+//    }
     @DeleteMapping("/deleteGuest")
     public ResponseEntity<?> deleteGuest(@RequestParam("guestId") int guestId) {
         try {

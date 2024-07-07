@@ -8,4 +8,4 @@ services:
       POSTGRES_USER: 'tayyab'
       POSTGRES_PASSWORD: 'tayyab'
     ports:
-      - '5447:5447'
+      - '5447:5432'
