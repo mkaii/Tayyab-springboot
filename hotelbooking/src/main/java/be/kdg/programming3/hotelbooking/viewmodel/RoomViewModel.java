@@ -1,5 +1,7 @@
 package be.kdg.programming3.hotelbooking.viewmodel;
 
+import be.kdg.programming3.hotelbooking.domain.Guest;
+import be.kdg.programming3.hotelbooking.domain.Reservation;
 import be.kdg.programming3.hotelbooking.domain.Room;
 import be.kdg.programming3.hotelbooking.domain.RoomType;
 import jakarta.validation.constraints.NotBlank;
@@ -21,9 +23,9 @@ public class RoomViewModel {
 
     private final RoomType roomType;
 
-    private final List<AssignedGuest> assignedGuests;
+    private final List<String> assignedGuests;
 
-    private RoomViewModel(final Integer roomId, String roomNumber, String roomDescription, Integer floor, double price, RoomType roomType, List<AssignedGuest> assignedGuests) {
+    private RoomViewModel(final Integer roomId, String roomNumber, String roomDescription, Integer floor, double price, RoomType roomType, List<String> assignedGuests) {
         this.roomId = roomId;
         this.roomNumber = roomNumber;
         this.roomDescription = roomDescription;
@@ -31,6 +33,22 @@ public class RoomViewModel {
         this.price = price;
         this.roomType = roomType;
         this.assignedGuests = Collections.unmodifiableList(assignedGuests);
+    }
+
+    public static RoomViewModel fromDomainWithGuests(final Room room){
+        return new RoomViewModel(
+                room.getRoomId(),
+                room.getRoomNumber(),
+                room.getRoomDescription(),
+                room.getFloor(),
+                room.getPrice(),
+                room.getRoomType(),
+                room.getReservations()
+                        .stream()
+                        .map(Reservation::getGuest)
+                        .map(Guest::getGuestLastName)
+                        .toList()
+        );
     }
 
     public static RoomViewModel fromDomain(final Room room){
@@ -41,10 +59,7 @@ public class RoomViewModel {
                 room.getFloor(),
                 room.getPrice(),
                 room.getRoomType(),
-                room.getReservation().stream().map(reservation -> new AssignedGuest(
-                        reservation.getGuest().getGuestId(),
-                        reservation.getGuest().getGuestFirstName()
-                )).toList()
+                List.of()
         );
     }
 
@@ -72,7 +87,7 @@ public class RoomViewModel {
         return roomType;
     }
 
-    public List<AssignedGuest> getAssignedGuests() {
+    public List<String> getAssignedGuests() {
         return assignedGuests;
     }
 }

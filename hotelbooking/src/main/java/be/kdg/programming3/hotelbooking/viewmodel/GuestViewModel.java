@@ -2,10 +2,10 @@ package be.kdg.programming3.hotelbooking.viewmodel;
 
 import be.kdg.programming3.hotelbooking.domain.Gender;
 import be.kdg.programming3.hotelbooking.domain.Guest;
-import be.kdg.programming3.hotelbooking.domain.Reservation;
-import be.kdg.programming3.hotelbooking.domain.Room;
 import jakarta.validation.constraints.Email;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -18,33 +18,33 @@ public class GuestViewModel {
     private final String guestContactNumber;
     private final Gender guestGender;
 
-    private final List<String> assignedRooms;
+    private final List<AssignedRoom> assignedRooms;
 
-    public GuestViewModel(final int guestId, String guestFirstName, String guestLastName, String guestEmail, String guestContactNumber, Gender guestGender, List<String> assignedRooms) {
+    public GuestViewModel(final int guestId, String guestFirstName, String guestLastName, String guestEmail, String guestContactNumber, Gender guestGender, List<AssignedRoom> assignedRooms) {
         this.guestId = guestId;
         this.guestFirstName = guestFirstName;
         this.guestLastName = guestLastName;
         this.guestEmail = guestEmail;
         this.guestContactNumber = guestContactNumber;
         this.guestGender = guestGender;
-        this.assignedRooms = assignedRooms;
+        this.assignedRooms = Collections.unmodifiableList(assignedRooms);
     }
 
-    public static GuestViewModel fromDomainWithRooms(final Guest guest) {
-        return new GuestViewModel(
-                guest.getGuestId(),
-                guest.getGuestFirstName(),
-                guest.getGuestLastName(),
-                guest.getGuestEmail(),
-                guest.getGuestContactNumber(),
-                guest.getGuestGender(),
-                guest.getReservations()
-                        .stream()
-                        .map(Reservation::getRoom)
-                        .map(Room::getRoomNumber)
-                        .toList()
-        );
-    }
+//    public static GuestViewModel fromDomainWithRooms(final Guest guest) {
+//        return new GuestViewModel(
+//                guest.getGuestId(),
+//                guest.getGuestFirstName(),
+//                guest.getGuestLastName(),
+//                guest.getGuestEmail(),
+//                guest.getGuestContactNumber(),
+//                guest.getGuestGender(),
+//                guest.getReservations()
+//                        .stream()
+//                        .map(Reservation::getRoom)
+//                        .map(Room::getRoomNumber)
+//                        .toList()
+//        );
+//    }
     public static GuestViewModel fromDomain(final Guest guest){
         return new GuestViewModel(
                 guest.getGuestId(),
@@ -53,7 +53,10 @@ public class GuestViewModel {
                 guest.getGuestEmail(),
                 guest.getGuestContactNumber(),
                 guest.getGuestGender(),
-                List.of()
+                guest.getReservations().stream().map(reservation -> new AssignedRoom(
+                        reservation.getRoom().getRoomId(),
+                        reservation.getRoom().getRoomNumber()
+                )).toList()
         );
     }
     public Integer getGuestId() {
@@ -80,7 +83,7 @@ public class GuestViewModel {
         return guestGender;
     }
 
-    public List<String> getAssignedRooms() {
+    public List<AssignedRoom> getAssignedRooms() {
         return assignedRooms;
     }
 }

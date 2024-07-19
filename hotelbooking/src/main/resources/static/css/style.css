@@ -1,10 +1,21 @@
-html{
+html, body{
     height: 97%;
+    margin: 0;
 }
 .navbar-custom {
     background-color: #f8f9fa;
 }
+.d-flex {
+    display: flex;
+    flex-direction: column;
+}
+.flex-grow-1 {
+    flex-grow: 1;
+}
 
+.min-vh-100 {
+    min-height: 100vh;
+}
 .navbar-custom .navbar-brand {
     padding: 5px;
     border-radius: 5px;

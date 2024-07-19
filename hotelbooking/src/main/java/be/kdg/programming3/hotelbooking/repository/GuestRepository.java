@@ -7,6 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
+
 @Repository
 public interface GuestRepository extends JpaRepository<Guest, Integer> {
     @Query("""
@@ -15,4 +17,16 @@ public interface GuestRepository extends JpaRepository<Guest, Integer> {
     LEFT JOIN FETCH guestWithReservation.room
     """)
     List<Guest> findGuestWithReservations();
+
+    @Query("""
+    FROM Guest guestAlias
+    LEFT JOIN FETCH guestAlias.reservations guestWithReservation
+    LEFT JOIN FETCH guestWithReservation.room
+    where guestAlias.guestId = :guestId
+    """)
+    Optional<Guest> findByIdWithReservations(int guestId);
+
+    List<Guest> searchGuestByGuestLastNameContainingIgnoreCase(String guestLastName);
+
+
 }

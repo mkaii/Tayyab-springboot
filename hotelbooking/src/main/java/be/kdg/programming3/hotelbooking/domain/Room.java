@@ -20,7 +20,7 @@ public class Room {
     @Enumerated(EnumType.STRING)
     private RoomType roomType;
     @OneToMany(mappedBy = "room")
-    List<Reservation> reservation;
+    private List<Reservation> reservations;
 
     public Integer getRoomId() {
         return roomId;
@@ -70,11 +70,11 @@ public class Room {
         this.roomType = roomType;
     }
 
-    public List<Reservation> getReservation() {
-        return reservation;
+    public List<Reservation> getReservations() {
+        return reservations;
     }
 
-    public void setReservation(List<Reservation> reservation) {
-        this.reservation = reservation;
+    public void setReservation(List<Reservation> reservations) {
+        this.reservations = reservations;
     }
 }

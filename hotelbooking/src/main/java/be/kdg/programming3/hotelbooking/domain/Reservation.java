@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -24,9 +25,9 @@ public class Reservation {
     @JoinColumn(name = "guestId")
     private Guest guest;
     @Column(name = "CHECK_IN_DATE")
-    private LocalDateTime check_in_date;
+    private LocalDate check_in_date;
     @Column(name = "CHECK_OUT_DATE")
-    private LocalDateTime check_out_date;
+    private LocalDate check_out_date;
     @Column(name = "TOTALGUEST")
     private Integer totalGuests;
 
@@ -54,20 +55,12 @@ public class Reservation {
         this.guest = guest;
     }
 
-    public LocalDateTime getCheck_in_date() {
+    public LocalDate getCheck_in_date() {
         return check_in_date;
     }
 
-    public void setCheck_in_date(LocalDateTime check_in_date) {
-        this.check_in_date = check_in_date;
-    }
-
-    public LocalDateTime getCheck_out_date() {
+    public LocalDate getCheck_out_date() {
         return check_out_date;
-    }
-
-    public void setCheck_out_date(LocalDateTime check_out_date) {
-        this.check_out_date = check_out_date;
     }
 
     public Integer getTotalGuests() {

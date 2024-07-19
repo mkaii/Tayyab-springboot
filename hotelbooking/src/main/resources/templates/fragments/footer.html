@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div class="container" th:fragment="footer">
+    <footer class="bg-body-tertiary text-center text-lg-start">
+        <div class="text-center p-3">
+            ©
+            <th:block th:text="${#dates.format(#dates.createNow(), 'yyyy')}"></th:block>
+            <b>Tayyab Mehmood</b> - ACS2 Programming5 - 2023/2024
+        </div>
+    </footer>
+</div>
+</html>

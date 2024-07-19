@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Search Guests')"></head>
+<body>
+<div class="d-flex flex-column min-vh-100">
+    <div th:replace="fragments/header :: header('searchguests')"></div>
+    <h2 class="mt-3 text-center">Search Guests</h2>
+    <div class="container mt-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+                        <li class="breadcrumb-item"><a th:href="@{'/guests'}">Guests</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Search</li>
+                    </ol>
+                </nav>
+
+                <div class="mb-3">
+                    <label for="search" class="form-label">Start typing to search...</label>
+                    <input type="text" class="form-control" id="search">
+                </div>
+
+                <div id="search-results"></div>
+            </div>
+        </div>
+    </div>
+    <div th:replace="fragments/footer :: footer"></div>
+</div>
+</body>
+</html>
